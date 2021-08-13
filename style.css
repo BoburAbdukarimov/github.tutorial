@@ -3,11 +3,50 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family:  'Hind Siliguri', sans-serif;
 }
 body{
     background-color: rgba(15, 15, 15, 0.897);
+    
 }
+/* loader */
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    }
+    .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+    }
+    @keyframes lds-dual-ring {
+    0% {
+    transform: rotate(0deg);
+    }
+    100% {
+    transform: rotate(360deg);
+    }
+    }
+    .loader{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(45deg, red, blue);
+        z-index: 1100;
+        transition: All .5s ease-in;
+    }
+/* loader */
 header{
     width: 100%;
     height: 80px;
@@ -75,6 +114,7 @@ padding: 10px 0;
     color: white;
     font-size: 14px;
     font-weight: 600;
+    /* width: 700px; */
 }
 .banner .ustiga .haqida a{
     color: white;
@@ -85,6 +125,7 @@ padding: 10px 0;
     text-decoration: none;
     display: inline-block;
     font-weight: 600;
+    margin: 15px 0;
 }
 
 
@@ -294,9 +335,10 @@ border-radius: 2px;
 .bar1{
 display: flex;
 justify-content: space-between;
+background-image: url('https://loading.io/asset/500386');
 }
 .col-left{
-width: 60%;
+width: 70%;
 }
 .bar .line::before{
     content: '';
@@ -380,7 +422,7 @@ justify-content: center;
 align-items: center;
 }
 .col-left2{
-    margin-left: 80px;
+    margin-left: 62px;
     width: 100%;
 
 }
@@ -464,7 +506,7 @@ padding: 20px 0;
         font-size: 25px;
     }
     header li a{
-   display: none;
+    display: none;
     
     }
     .hamburger{
@@ -473,9 +515,9 @@ padding: 20px 0;
         background-repeat: no-repeat;
         width: 30px;
         height: 30px;
-       display: block;  
-       filter: invert(1); 
- }
+        display: block;  
+        filter: invert(1); 
+    }
     .menu-bar{
         display: none;
     }
@@ -486,14 +528,16 @@ padding: 20px 0;
     padding: 10px 0;
     }
     .banner .ustiga .haqida p{
-       color: white;
-       font-size: 14px;
+        color: white;
+        font-size: 14px;
+        /* width: 450px; */
     }
     .banner .ustiga .haqida a{
         padding: 5px 15px;
         font-size: 16px;
-     }
-     .about{
+
+    }
+    .about{
         padding: 0 20px;
         
     }
@@ -507,8 +551,8 @@ padding: 20px 0;
         flex-direction: column;
         }
         .about .haqida2{
-          width: 100%;
-          height: auto;
+        width: 100%;
+        height: auto;
         }
         .about .haqida2{
             padding: 0;
@@ -529,17 +573,16 @@ padding: 20px 0;
             header ul li a{
                 color: rgb(224, 224, 224);
                 z-index: 1000;
-                display: inline-block;
+                
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-               
             }
             header ul li a:hover{
-               border-radius: 5px;
+                border-radius: 5px;
                 transition: .5s ease;
-                 padding: 10px 20px;
+                padding: 10px 20px;
                 background-color: crimson;
                 width: 100%;
             }
@@ -557,9 +600,8 @@ padding: 20px 0;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-             transition: 5s ease;
-               transform: translateY(100%);
-             
+                transition: 5s ease;
+                transform: translateY(100%);
             }
             .hamburger.active{
                 background-image: url('close.svg');

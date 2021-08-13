@@ -8,18 +8,33 @@ window.addEventListener('DOMContentLoaded', function (){
     const menuBtn = document.querySelector('.hamburger'),
           btn = document.querySelector('.btn'),
           navigation = document.querySelector('.menu-bar'),
-          body = document.body,
           matnlar = document.querySelector('.matnlar'),
           qisqa = document.querySelector('.qisqacha'),
           color = document.querySelector('.color'),
           send = document.querySelector('.send'),
           bar1 =document.querySelector('.bar1'),
-          modal = document.querySelector('.modal');
+          modal = document.querySelector('.modal'),
+          col = document.querySelector(".col"),
+          rasmla007 = document.querySelector('#rasmla007'),
+          btn1 = document.querySelector('.btn1'),
+          loader = document.querySelector('.loader');
+console.log(rasmla007);
+
+setTimeout(function(){
+  loader.style.opacity = '0';
+  setTimeout(function(){
+    loader.style.display = 'none';
+  }, 1000)
+},2500)
 
             menuBtn.addEventListener('click',function(){
             menuBtn.classList.toggle('active');
             navigation.classList.toggle('active');
     });
+//     rasmla007.addEventListener('click',function(){
+//       rasmla007.classList.toggle('active12');
+//       col.classList.toggle('active12');
+// });
     btn.addEventListener('click',function(){
     qisqa.style.display = 'block';
 });
@@ -42,5 +57,5 @@ color.addEventListener('click',function(){
   //  bar1.addEventListener('click', ()=>{
   //   modal.style.display = 'none'
   // })
-  console.log("hello jshind");
+
 });
